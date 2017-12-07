@@ -21,7 +21,7 @@ int	main(void)
 
 	if ((fd = open("test.txt", O_RDONLY)) < 0)
 		return (0);
-	while ((result = get_next_line(fd, &str)) != 0)
+	while ((result = get_next_line(fd, &str)) > 0)
 	{
 		printf("%s\n", str);
 		free(str);
