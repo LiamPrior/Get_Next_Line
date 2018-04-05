@@ -29,6 +29,7 @@ static	int	find_nl(int fd, char **str, char **line)
 	else if (*str[fd])
 	{
 		*line = ft_strdup(str[fd]);
+		free(str[fd]);
 		str[fd] = ft_strnew(0);
 		return (1);
 	}
